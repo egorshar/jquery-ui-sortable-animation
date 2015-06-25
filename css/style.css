@@ -1,0 +1,33 @@
+.jqui-s-a-container {
+  padding: 0;
+}
+.jqui-s-a-container__item {
+  list-style-type: none;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ce4844;
+  border-left-width: 5px;
+  border-radius: 3px;
+  width: 200px;
+  background-color: #fff;
+}
+
+.jqui-s-a-buttons-container {
+  white-space: nowrap;
+}
+.jqui-s-a-buttons-container a:hover {
+  text-decoration: none;
+}
+.jqui-s-a-buttons-container > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.jqui-s-a-footer {
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
