@@ -7,6 +7,19 @@
  * Depends:
  *  jquery.ui.sortable.js
  */
+ 
+(function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+
+		// AMD. Register as an anonymous module.
+		define([ "jquery", "jquery-ui" ], factory );
+	} else {
+
+		// Browser globals
+		factory( jQuery );
+	}
+}(function( $ ) {
+  
 (function (window, $) {
   var supports = {},
       testProp = function (prefixes) {
@@ -122,3 +135,5 @@
     }
   });   
 })(window, jQuery);
+
+}));
