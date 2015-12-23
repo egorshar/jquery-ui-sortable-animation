@@ -38,24 +38,21 @@
       <h3>Configure</h3>
       <p>Available options:</p>
       <ul>
-        <li><code>sortAnimateDuration</code> - animation duration, <b>150ms</b> by default</li>
-        <li><code>sortAnimate</code> - boolean flag for enabling animation, <b>false</b> by default</li>
+        <li><code>animation</code> - animation duration in ms, <b>0</b> no animation</li>
       </ul>
       <h3>Example Code</h3>
       <!--
       $('#sortable').sortable({
         axis: 'y',
         containment: 'parent',
-        sortAnimateDuration: 200,
-        sortAnimate: true
+        animation: 200,
       });
       -->
       <pre style='color:#000000;background:#ffffff;'>$<span style='color:#808030; '>(</span><span style='color:#800000; '>'</span><span style='color:#0000e6; '>#sortable</span><span style='color:#800000; '>'</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>sortable<span style='color:#808030; '>(</span><span style='color:#800080; '>{</span>
   axis<span style='color:#800080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>y</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span>
   containment<span style='color:#800080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>parent</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span>
 
-  sortAnimateDuration<span style='color:#800080; '>:</span> <span style='color:#008c00; '>200</span><span style='color:#808030; '>,</span>
-  sortAnimate<span style='color:#800080; '>:</span> <span style='color:#0f4d75; '>true</span>
+  animation<span style='color:#800080; '>:</span> <span style='color:#008c00; '>200</span><span style='color:#808030; '>,</span>
 <span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
 </pre>
       <h3>Demo</h3>
@@ -71,7 +68,6 @@
     </div>
     <div class="container jqui-s-a-footer">
       <p>jQuery UI Sortable Animation 2015 &copy; <a href="//github.com/egorshar">egorshar</a></p>
-      <p>Lead Front-End Engineer at <a href="//amocrm.ru">amoCRM</a></p>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -83,8 +79,7 @@
         $('#sortable').sortable({
           axis: 'y',
           containment: 'parent',
-          sortAnimateDuration: 200,
-          sortAnimate: true
+          animation: 200,
         });
       });
     </script>
