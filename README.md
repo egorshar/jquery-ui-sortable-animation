@@ -14,12 +14,11 @@ Just follow these simple steps to enable sort animation in your jQuery UI app:
 ```html
 <script src="jquery.ui.sortable-animation.js"></script>
 ```
-* Just use jQuery UI as usual or with special `sortAnimate` parameter
+* Just use jQuery UI as usual or with special `animation` parameter
 ```html
 <script>
   $('#sortable').sortable({
-    sortAnimateDuration: 150, // animation duration (default - 150ms)
-    sortAnimate: true // default - false
+    animation: 150, // animation duration (ms), 0 - no animation
   });
 </script>
 ```
