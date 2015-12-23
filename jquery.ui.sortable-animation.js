@@ -46,7 +46,7 @@
 
   use_css_animation = supports['transform'] && supports['transition'];
 
-  $.widget("app.sortable", $.ui.sortable, {
+  $.widget("ui.sortable", $.ui.sortable, {
     options: {
       // adds the new `animation` option, turned off by default.
       animation: 0,
@@ -58,32 +58,35 @@
       var $item,
           props = {},
           reset_props = {},
-          offset;
+          offset,
+          axis = $.trim(this.options.axis);
 
       // just call the original implementation of _rearrange()
       // if option `animation` is turned off
       // `currentContainer` used for animating received items
       // from another sortable container (`connectWith` option)
-      if (!parseInt(this.currentContainer.options.animation)) {
+      if (!parseInt(this.currentContainer.options.animation) ||
+          !axis
+      ) {
         return this._superApply(arguments);
       }
 
       $item = $(item.item[0]);
       // if moved up, then move item up to its height,
       // if moved down, then move item down
-      offset = (this.direction == 'up' ? '' : '-') + ($item[this.options.axis == 'x' ? 'width' : 'height']()) + 'px';
+      offset = (this.direction == 'up' ? '' : '-') + ($item[axis == 'x' ? 'width' : 'height']()) + 'px';
 
       // call original _rearrange() at first
       this._superApply(arguments);
 
       // prepare starting css props
       if (use_css_animation) {
-        props[supports['transform']] = (this.options.axis == 'x' ? 'translateX' : 'translateY') + '(' + offset + ')';
+        props[supports['transform']] = (axis == 'x' ? 'translateX' : 'translateY') + '(' + offset + ')';
       } else {
         props = {
           position: 'relative',
         };
-        props[this.options.axis == 'x' ? 'left' : 'top'] = offset;
+        props[axis == 'x' ? 'left' : 'top'] = offset;
       }
 
       // set starting css props on item
