@@ -92,7 +92,7 @@
       // set starting css props on item
       $item.css(props);
 
-      // if css animations do not supported
+      // if css animations are not supported
       // use jQuery animations
       if (use_css_animation) {
         props[supports['transition']] = supports['transform'] + ' ' + this.options.animation + 'ms';
