@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/egorshar/jquery-ui-sortable-animation/issues"
   },
-  "homepage": "https://github.com/egorshar/jquery-ui-sortable-animation#readme"
+  "homepage": "https://github.com/egorshar/jquery-ui-sortable-animation#readme",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1"
+  }
 }
