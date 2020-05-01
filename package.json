@@ -1,6 +1,6 @@
 {
   "name": "jquery-ui-sortable-animation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Enables sorting animation for jQueryUI sortable plugin",
   "main": "jquery.ui.sortable-animation.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/egorshar/jquery-ui-sortable-animation#readme",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui": "^1.12.1"
   }
 }
