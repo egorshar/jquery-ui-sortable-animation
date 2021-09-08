@@ -71,13 +71,15 @@
         return this._superApply(arguments);
       }
 
+      // call original _rearrange() at first, before access to item, which may be undefined
+      this._superApply(arguments);
+      if (item == null) { return; }
+      
       $item = $(item.item[0]);
       // if moved up, then move item up to its height,
       // if moved down, then move item down
       offset = (this.direction == 'up' ? '' : '-') + ($item[axis == 'x' ? 'width' : 'height']()) + 'px';
 
-      // call original _rearrange() at first
-      this._superApply(arguments);
 
       // prepare starting css props
       if (use_css_animation) {
